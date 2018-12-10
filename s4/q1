@@ -1,0 +1,8 @@
+#!/bin/bash
+echo -n "1)Current logged user and logname:- $USER "; whoami
+echo "2)Current shell:- $SHELL"  
+echo "3)Current home directory:- $HOME"
+echo -n "4)OS Type:-"; uname -o
+echo "5)Current path setting:- $PATH"
+echo -n "6)Current working directory:-"; pwd
+echo -n "7)Current logged user:-"; who | wc -l
