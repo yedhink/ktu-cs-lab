@@ -1,0 +1,10 @@
+copy start 1000
+** lda five
+** sta num1
+** ldch num2
+** stch c1
+num1 resw 2
+five word 5
+num2 byte x'f1'
+c1 resb 1
+** end **

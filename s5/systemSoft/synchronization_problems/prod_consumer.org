@@ -1,0 +1,38 @@
+* Objective
+** Producers and consumers requests a processs
+** buffer can only be used by one of these processes
+** if buffer full then
+*** cant produce more
+*** consumer has to consume something
+** if buffer empty then
+*** cant consume more
+*** producer has to produce something
+
+* Constraints
+** the buffer size is fixed while doing in lab \(..)/
+   
+* Functions
+** pthread_create(...)
+*** pthread_t *thread
+**** its the thread id
+*** const pthread_attr_t *attr
+**** the default value for attr = NULL
+*** void *(*start_routine) (void *)
+**** its the function that the thread should work on
+*** void *arg
+**** the params for that function
+
+** sem_init(...)
+*** semaphore to be initialized(of type sem_t)
+*** can be either 0 or 1. 0 means semaphore is shared bw threads of a process
+*** value to be intialized to semaphore
+**** increments the value
+
+** sem_wait(...)
+*** name of semaphore to be waited out/decremented
+**** decements the value
+
+** pthread_join(...)
+*** thread name
+**** waits untill this thread is terminated.
+**** avoids zombie processes
