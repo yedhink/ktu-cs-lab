@@ -35,3 +35,16 @@ the scripts that i use on a daily basis for a productive workflow can be found i
 * procedures
 * sequences
 * triggers
+
+## s6
+### networks lab
+* tcp bidirectional server
+* tcp unidirectional
+* udp bidirectional
+* udp time server
+* broadcasting network
+* ftp server
+* image transfer network
+* tcl simulations
+* pipe operations
+* public chatroom
