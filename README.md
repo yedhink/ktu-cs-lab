@@ -48,3 +48,12 @@ the scripts that i use on a daily basis for a productive workflow can be found i
 * tcl simulations
 * pipe operations
 * public chatroom
+
+### microprocessor lab
+* read array from input
+* read two digit numbers from input
+* sum two numbers
+* calculator
+* print sum of even and then odd numbers
+* find largest and smallest in an array
+* check if given string is palindrome
