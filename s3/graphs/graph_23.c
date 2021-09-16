@@ -20,7 +20,7 @@ struct vertex* dequeue();
 int search(int no);
 struct vertex* gptr(struct vertex *g);
 int dfs();
-int bfs();
+
 
 int main(){
 	int item,i;
@@ -28,7 +28,7 @@ int main(){
 	//scanf("%d",&item);
 	insert_vertex(graph,1);
 	do{
-		printf("\n\nMENU:-\n1. Depth First Search\n2. Breadth First Search\n3. Exit\n");
+		printf("\n\nMENU:-\n1. Depth First Search\n2. Exit\n");
 		printf("Enter your choice : ");
 		scanf("%d",&i);
 		switch(i){
@@ -37,12 +37,8 @@ int main(){
 				dfs();
 				printf("\n");
 				break;
-			case 2 : 
-				printf("\nBFS Traversal:-\n");
-				bfs();
-				printf("\n");
-				break;
-			case 3:
+			
+			case 2:
 				exit(0);
 			default :
 				printf("\nInvalid Choice\n");
@@ -123,27 +119,7 @@ int dfs(){
 	return 0;
 }
 
-int bfs(){
-	struct vertex *temp = graph,*ptr;
-	if (graph == NULL){
-		printf("\nGraph is empty\n");
-		return 0;
-	}
-	enqueue(temp);
-	while (front!=-1 && rear!=-1){
-		temp = dequeue();
-		if (search(temp->info) == 0){
-			printf("%d  ",temp->info);
-			visit[++num]=temp->info;
-			ptr = temp->v;
-			while (ptr!=NULL){
-				push(ptr);
-				ptr = ptr->v;
-			}
-		}
-	}
-	return 0;
-}
+
 
 struct vertex* gptr(struct vertex *g){
 	struct vertex *temp = graph;
